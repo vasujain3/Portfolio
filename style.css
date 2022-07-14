@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-color: #080022;
+}
+
+nav {
+    background-color: #080022;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 52px;
+    color: #6849cd;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bolder;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #6849cd;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+
+a.active,
+a:hover {
+    background-color: #9596e0;
+    transition: 0.5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #6849cd;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #9596e0;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: black;
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+
+/* scroll to top  */
+
+#btnScrollToTop a {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #4e06f7;
+    box-shadow: 0 0 10px #4e06f7;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 34px;
+}
+
+#btnScrollToTop a:hover {
+    color: #000;
+}
+
+
+/* home  */
+
+.home_container {
+    position: relative;
+    row-gap: 4.5rem;
+    padding-top: 2rem;
+}
+
+.home_data {
+    text-align: center;
+}
+
+.home_greeting {
+    display: black;
+    color: white;
+    margin-bottom: 0.25rem;
+    font-size: 4.2em;
+}
+
+.home_education {
+    color: white;
+    margin-bottom: 2.5rem;
+    font-size: 2.2em;
+}
+
+.home_name {
+    color: #4e06f7;
+    font-size: var(--biggest-font-size);
+    font-size: 3.2em;
+}
+
+.responsive {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.center {
+    position: absolute;
+    top: 167%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.parent {
+    position: relative;
+}
+
+.home_buttons {
+    padding: 2rem;
+    padding-left: 2rem;
+    position: absolute;
+    top: 247%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home_buttons a {
+    border-radius: 40px;
+    border: 0;
+    font-family: "nunito";
+    font-size: 1.8em;
+    font-weight: 600;
+    margin: 1rem 0;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    text-transform: capitalize;
+    white-space: nowrap;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button--ghost {
+    background-color: #6849cd;
+    color: white;
+}
+
+.button--ghost:hover {
+    background: #2b089c;
+}
+
+
+/* About  */
+
+.About_section {
+    margin-top: 52rem;
+    height: 123vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6849cd;
+}
+
+.About_section img {
+    height: auto;
+    width: 580px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.About_main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.About_text {
+    width: 1100px;
+    /* max-width: 100%; */
+    padding: 0 10px;
+}
+
+.About_text h1 {
+    color: white;
+    font-size: 50px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.About_text span {
+    color: white;
+    font-size: 30px;
+    text-transform: capitalize;
+    line-height: 40px;
+    margin-bottom: -32px;
+}
+
+
+/* skill bar */
+
+.h3 {
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    display: flex;
+    margin-left: 42%;
+    margin-top: 9%;
+}
+
+.heading {
+    color: white;
+    font-size: 50px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.skills {
+    margin-top: 2%;
+    display: grid;
+    height: 100%;
+    place-items: center;
+    color: white;
+}
+
+.bar {
+    width: 600px;
+    border-radius: -4px;
+    padding: 25px 50px;
+    background: #6849cd;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skills .bar .infospan {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.bar span {
+    padding: 2px;
+    font-size: 25px;
+}
+
+.skills .bar .progress-line {
+    position: relative;
+    height: 11px;
+    width: 100%;
+    background: #d4d4d4;
+    border-radius: 10px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px rgba(143, 140, 140, 0.8);
+    transform: scale(0);
+    transform-origin: left;
+    margin-top: 12px;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line span {
+    height: 8px;
+    width: 80%;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    margin-top: 2px;
+    border-radius: 10px;
+    transform: scale(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scale(1);
+    }
+}
+
+.progress-line.java span {
+    width: 80%;
+}
+
+.progress-line.cpp span {
+    width: 75%;
+}
+
+.progress-line.Html span {
+    width: 75%;
+}
+
+.progress-line.Css span {
+    width: 70%;
+}
+
+.progress-line.Js span {
+    width: 55%;
+}
+
+.progress-line.Vb span {
+    width: 70%;
+}
+
+.progress-line.Android span {
+    width: 50%;
+}
+
+.progress-line.Mysql span {
+    width: 60%;
+}
+
+.progress-line.AdobeIll span {
+    width: 75%;
+}
+
+.bar .progress-line span::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+}
+
+.bar .progress-line span::after {
+    position: absolute;
+    content: "80%";
+    right: 0;
+    top: -20px;
+    color: #fff;
+    font-size: 15px;
+    background: #000;
+    font-weight: 500;
+    padding: 1px 8px;
+    border-radius: 3px;
+}
+
+.progress-line.java span::after {
+    content: "80%";
+}
+
+.progress-line.cpp span::after {
+    content: "75%";
+}
+
+.progress-line.Html span::after {
+    content: "75%";
+}
+
+.progress-line.Css span::after {
+    content: "70%";
+}
+
+.progress-line.Js span::after {
+    content: "55%";
+}
+
+.progress-line.Vb span::after {
+    content: "70%";
+}
+
+.progress-line.Android span::after {
+    content: "50%";
+}
+
+.progress-line.Mysql span::after {
+    content: "60%";
+}
+
+.progress-line.AdobeIll span::after {
+    content: "75%";
+}
+
+
+/* eductaion  */
+
+.heading {
+    text-align: center;
+    margin: 77px 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: 0.1rem solid #fff4;
+    color: #fff;
+}
+
+.education .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+
+.education .box-container .box span {
+    font-size: 1.3rem;
+    background: #2b089c;
+    color: #fff;
+    border-radius: 5rem;
+    padding: 0.5rem 2.5rem;
+}
+
+.education .box-container .box {
+    width: 37rem;
+    margin: 4rem 6rem;
+    padding-left: 4rem;
+    border-left: 0.2rem solid #fff;
+    position: relative;
+    color: #6849cd;
+}
+
+.education .box-container .box h3 {
+    font-size: 2rem;
+    color: #4e06f7;
+    padding-top: 1.5rem;
+}
+
+.education .box-container .box p {
+    font-size: 1.4rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+
+/* services  */
+
+.services .box-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 20%;
+}
+
+.services .box-container .box {
+    margin: 3rem;
+    padding: 2rem;
+    border-radius: 3rem;
+    box-shadow: 0 1rem 2rem #eee;
+    background: #4e06f7;
+    text-align: center;
+    width: 32rem;
+}
+
+.services .box-container .box i {
+    color: #2b089c;
+    font-size: 4.5rem;
+    padding: 1rem 0;
+}
+
+.services .box-container .box p {
+    color: #eee;
+    font-size: 1.4rem;
+    padding: 0.5rem 5rem;
+}
+
+
+/* Contact */
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .content {
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+
+.contact .row .content .info h3 {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+.contact .row .content .title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: #fff;
+}
+
+.social a {
+    background-color: #4e06f7;
+    font-size: 46px;
+    color: #fff;
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    display: flexbox;
+    text-align: center;
+    border: 6px solid #4e06f7;
+    border-radius: 74%;
+    justify-content: space-between;
+    margin-left: 3%;
+    padding-left: 1%;
+}
