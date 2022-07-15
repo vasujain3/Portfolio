@@ -140,7 +140,7 @@ a:hover {
 .home_container {
     position: relative;
     row-gap: 4.5rem;
-    padding-top: 2rem;
+    padding-top: 11rem;
 }
 
 .home_data {
@@ -219,7 +219,7 @@ a:hover {
 /* About  */
 
 .About_section {
-    margin-top: 52rem;
+    margin-top: 66rem;
     height: 123vh;
     width: 100%;
     display: flex;
@@ -490,36 +490,59 @@ a:hover {
     padding: 1rem 0;
 }
 
-
-/* services  */
-
-.services .box-container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-left: 20%;
+#slideshow {
+    overflow: hidden;
+    height: 800px;
+    width: 728px;
+    margin: 0 auto;
 }
 
-.services .box-container .box {
-    margin: 3rem;
-    padding: 2rem;
-    border-radius: 3rem;
-    box-shadow: 0 1rem 2rem #eee;
-    background: #4e06f7;
-    text-align: center;
-    width: 32rem;
+.slide {
+    float: left;
+    height: 1000px;
+    width: 728px;
 }
 
-.services .box-container .box i {
-    color: #2b089c;
-    font-size: 4.5rem;
-    padding: 1rem 0;
+.slide-wrapper {
+    width: calc(728px * 4);
+    animation: slide 10s ease infinite;
 }
 
-.services .box-container .box p {
-    color: #eee;
-    font-size: 1.4rem;
-    padding: 0.5rem 5rem;
+.slide:nth-child(1) {
+    background: #2b089c;
+}
+
+.slide:nth-child(2) {
+    background: #2b089c;
+}
+
+.slide:nth-child(3) {
+    background: #2b089c;
+}
+
+.slide:nth-child(4) {
+    background: #2b089c;
+}
+
+
+/* Define the animation
+for the slideshow */
+
+@keyframes slide {
+    /* Calculate the margin-left for
+  each of the slides */
+    20% {
+        margin-left: 0px;
+    }
+    40% {
+        margin-left: calc(-728px * 1);
+    }
+    60% {
+        margin-left: calc(-728px * 2);
+    }
+    80% {
+        margin-left: calc(-728px * 3);
+    }
 }
 
 
